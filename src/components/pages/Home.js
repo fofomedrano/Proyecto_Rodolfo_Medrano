@@ -66,6 +66,7 @@ export default function Home() {
                     [6,'Bootstrap 4'],
                     [7,'GIT'],
                     [8,'WordPress'],
+                    [9, 'SQL']
 
                     ];
     return (
