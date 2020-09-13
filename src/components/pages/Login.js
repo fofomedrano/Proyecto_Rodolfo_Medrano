@@ -3,22 +3,14 @@ import {PageLayout} from 'components/common';
 import {Jumbotron} from 'components/common';
 import { Container, Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
-import {LoginMain} from 'components/common'
-
+import {LoginMain} from 'components/common';
+import LoginForm from 'components/common/LoginForm';
 
 const Styles = styled.div` 
-  
-      .personal-profile .personal-profile__avatar img {
-    border-radius: 5px;
-    box-shadow: 0 0 27px rgba(96,96,96,.34);
-    width: 90%;
-    height: 380px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    margin-top: 10px;
-    position: relative;
-    top: 40px;
-}
+    .form_row {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
     .personal-profile .personal-profile__name {
     font-size: 44px;
     line-height: 50px;
@@ -26,12 +18,8 @@ const Styles = styled.div`
     margin-top: 40px;
     margin-bottom: 10px;
 }
-     .personal-profile__work {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 40px;
-}
 
+}
 `;
 
 export default function Login() {
@@ -48,7 +36,15 @@ export default function Login() {
                     </Row>
                 </Container>
            </Jumbotron>
-           <LoginMain></LoginMain>
+            {/* <LoginMain></LoginMain>  */}
+            <Container>
+                    <Row className="form_row">
+                        <Col md="6">
+                        <LoginForm/>
+                        </Col>
+                    </Row>
+                </Container>
+            
            </Styles>
         </PageLayout>
     )

@@ -7,3 +7,4 @@ export * from './ReactTypingEffectTitle';
 export * from './Autenticacion';
 export * from './Saludo';
 export * from './LoginMain';
+export * from './LoginForm';
