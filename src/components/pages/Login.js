@@ -11,14 +11,13 @@ const Styles = styled.div`
         padding-top: 100px;
         padding-bottom: 100px;
     }
+
     .personal-profile .personal-profile__name {
     font-size: 44px;
     line-height: 50px;
     font-weight: 700;
     margin-top: 40px;
     margin-bottom: 10px;
-}
-
 }
 `;
 
