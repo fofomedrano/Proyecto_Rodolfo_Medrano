@@ -94,8 +94,8 @@ export function Hello(props) {
                     <Col md="10">
                         <h1 className="section__title"><ReactTypingEffectTitle>Hi_</ReactTypingEffectTitle></h1>
                         <p className="section__description">
-                        I am Web developer able to build a Web presence from the ground up - from concept, navigation,
-          layout and programming to UX and SEO. Skilled at writing well-designed, testable and efficient code using
+                        I am a Front End Web Developer able to build a great looking interface for your project from the ground up, from concept to
+          layout and programming to UX and SEO. I am also skilled at writing well-designed, testable and efficient code using
           current best practices in Web development. Fast learner, hard worker and team player.
                         </p>
                         <GenericButton>   
@@ -149,15 +149,15 @@ export function Hello(props) {
                 <Row>
                     
                     <Col md="8" className="resume-list">
-                        <h3  className="resume-list__title">General Skills</h3>
+                        <h3  className="resume-list__title">General Skills test branch</h3>
                         <div className="resume-list__block">
                             <ul  className="resume-list__block-date">{
-                                                                        skills.map((skill)=>
-                                                                        <li key= {skill[0]}>
-                                                                            {skill[1]}
-                                                                        </li>
-                                                                        )
-                                                                    }</ul>
+                            skills.map((skill)=>
+                            <li key= {skill[0]}>
+                                {skill[1]}
+                            </li>
+                            )
+                        }</ul>
                         </div>
                     </Col>
                 </Row>     
