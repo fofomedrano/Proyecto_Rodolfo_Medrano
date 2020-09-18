@@ -2,9 +2,10 @@ import React from 'react';
 import { PageLayout } from 'components/common';
 import { Jumbotron } from 'components/common';
 import { Container, Row, Col } from 'react-bootstrap';
-import backgroundImg from '../../assets/backgroundImg.jpg';
 import styled from 'styled-components';
-import { Hello } from 'components/common';
+import { css } from "@emotion/core";
+import BounceLoader from "react-spinners/BounceLoader";
+
 
 
 const Styles = styled.div` 
@@ -56,6 +57,14 @@ const Styles = styled.div`
 
 
 `;
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+`;
 
 class Blog extends React.Component {
     constructor(props) {
@@ -106,7 +115,13 @@ class Blog extends React.Component {
         if (error) {
             return <div>Se encontró el siguiente error: {error.message}</div>;
         } else if (!estaCargado) {
-            return <div>Cargando los datos...</div>;
+            
+            return <div><BounceLoader
+            css={override}
+            size={60}
+            color={"#0E79B2"}
+          /></div>;
+
         } else {
             return (
                 <PageLayout >
