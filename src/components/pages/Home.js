@@ -1,10 +1,10 @@
 import React from 'react';
-import {PageLayout} from 'components/common';
-import {Jumbotron} from 'components/common';
+import { PageLayout } from 'components/common';
+import { Jumbotron } from 'components/common';
 import { Container, Row, Col } from 'react-bootstrap';
 import backgroundImg from '../../assets/backgroundImg.jpg';
 import styled from 'styled-components';
-import {Hello} from 'components/common';
+import { Hello } from 'components/common';
 
 
 const Styles = styled.div` 
@@ -57,46 +57,57 @@ const Styles = styled.div`
 
 `;
 
-export default function Home() {
-    const skills = [[1,'HTML5'],
-                    [2,'CSS3'],
-                    [3,'JavaScript'],
-                    [4,'PHP'],
-                    [5,'UX/UI'],
-                    [6,'Bootstrap 4'],
-                    [7,'GIT'],
-                    [8,'WordPress'],
-                    [9, 'SQL']
+class Home extends React.Component {
 
-                    ];
-    return (
-        <PageLayout >
-            <Styles >
-           <Jumbotron >
-                <Container>
-                    <Row className="personal-profile">
-                        <Col md="4" className="personal-profile__avatar">
-                            <img src= {backgroundImg} alt="background"/>
-                        </Col>
-                        <Col md="8">
-                            <p className="personal-profile__name">Rodolfo Medrano Córdoba</p>
-                            <p className="personal-profile__work">Web Developer</p>
-                            <div className= "personal-profile__contact">
-                                <dl className="contact-list contact-list__opacity-titles">
-                                    <dt>Phone:</dt>
-                                    <dd>(506) 72041471</dd>
-                                    <dt>Email</dt>
-                                    <dd>fofomedrano@gmail.com</dd>
-                                    <dt>Address:</dt>
-                                    <dd>San José, Costa Rica</dd>                             
-                                </dl>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-           </Jumbotron>
-           <Hello  skills= {skills}></Hello>
-           </Styles>
-        </PageLayout>
-    )
-}
+    render() {
+        const skills = [[1, 'HTML5'],
+        [2, 'CSS3'],
+        [3, 'JavaScript'],
+        [4, 'PHP'],
+        [5, 'UX/UI'],
+        [6, 'Bootstrap 4'],
+        [7, 'GIT'],
+        [8, 'WordPress'],
+        [9, 'SQL']
+
+        ];
+
+  
+            return (
+                <PageLayout >
+                    <Styles >
+                        <Jumbotron >
+                            <Container>
+                                <Row className="personal-profile">
+                                    <Col md="4" className="personal-profile__avatar">
+                                        <img src={backgroundImg} alt="background" />
+                                    </Col>
+                                    <Col md="8">
+                                        <p className="personal-profile__name">Rodolfo Medrano Córdoba</p>
+                                        <p className="personal-profile__work">Web Developer</p>
+                                        <div className="personal-profile__contact">
+                                            <dl className="contact-list contact-list__opacity-titles">
+                                                <dt>Phone:</dt>
+                                                <dd>(506) 72041471</dd>
+                                                <dt>Email</dt>
+                                                <dd>fofomedrano@gmail.com</dd>
+                                                <dt>Address:</dt>
+                                                <dd>San José, Costa Rica</dd>
+                                            </dl>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </Jumbotron>
+                        <Hello skills={skills}></Hello>
+                        
+                    </Styles>
+                </PageLayout>
+
+            );
+        }
+
+    }
+
+
+export default Home;

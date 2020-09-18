@@ -149,7 +149,6 @@ export function Hello(props) {
                 <Row>
                     
                     <Col md="8" className="resume-list">
-                        <h1>Fetch </h1>
                         <h3  className="resume-list__title">General Skills</h3>
                         <div className="resume-list__block">
                             <ul  className="resume-list__block-date">{
