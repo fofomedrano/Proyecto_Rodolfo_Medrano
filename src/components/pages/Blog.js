@@ -14,11 +14,6 @@ const Styles = styled.div`
     border: 2px solid;
     margin-bottom: 50px;
   }
-
-
-
-
-
 `;
 const override = css`
   display: block;

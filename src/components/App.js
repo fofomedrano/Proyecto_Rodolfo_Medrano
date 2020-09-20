@@ -3,7 +3,6 @@ import {createGlobalStyle} from 'styled-components';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Contact from 'components/pages/Contact';
 import Home from 'components/pages/Home';
-import Resume from 'components/pages/Resume';
 import Portfolio from 'components/pages/Portfolio';
 import Blog from 'components/pages/Blog';
 import Login from 'components/pages/Login';
@@ -37,7 +36,6 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component = {Home}/>  
-        <Route exact path="/Resume" component = {Resume}/>
         <Route exact path="/Portfolio" component = {Portfolio}/>
         <Route exact path="/Blog" component = {Blog}/>   
         <Route exact path="/Contact" component = {Contact}/>   
