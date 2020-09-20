@@ -8,3 +8,6 @@ export * from './Autenticacion';
 export * from './Saludo';
 export * from './LoginMain';
 export * from './LoginForm';
+export * from './CampoTemperatura';
+export * from './Calculadora';
+export * from './AguaHirviendo';

@@ -5,55 +5,18 @@ import { Container, Row, Col } from 'react-bootstrap';
 import styled from 'styled-components';
 import { css } from "@emotion/core";
 import BounceLoader from "react-spinners/BounceLoader";
-
+import Calculadora from 'components/common/Calculadora';
 
 
 const Styles = styled.div` 
-  
-      .personal-profile .personal-profile__avatar img {
-    border-radius: 5px;
-    box-shadow: 0 0 27px rgba(96,96,96,.34);
-    width: 90%;
-    height: 380px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    margin-top: 10px;
-    position: relative;
-    top: 40px;
-}
-    .personal-profile .personal-profile__name {
-    font-size: 44px;
-    line-height: 50px;
-    font-weight: 700;
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
-     .personal-profile__work {
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 40px;
-}
-    .personal-profile__contact {
-    margin-bottom: 20px;
-}
-.contact-list{
-    font-size: 16px;
-    line-height: 24px;
-    font-family: Roboto Mono,monospace;
-}
+  .convertidor {
+    padding: 50px;
+    border: 2px solid;
+    margin-bottom: 50px;
+  }
 
-.contact-list.contact-list__opacity-titles dt {
-    opacity: .4;
-}
-.contact-list dt {
-    float: left;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.contact-list dd {
-    padding-left: 100px;
-    margin-bottom: 15px;
-}
+
+
 
 
 `;
@@ -99,17 +62,6 @@ class Blog extends React.Component {
     }
 
     render() {
-        const skills = [[1, 'HTML5'],
-        [2, 'CSS3'],
-        [3, 'JavaScript'],
-        [4, 'PHP'],
-        [5, 'UX/UI'],
-        [6, 'Bootstrap 4'],
-        [7, 'GIT'],
-        [8, 'WordPress'],
-        [9, 'SQL']
-
-        ];
 
         const { error, estaCargado, elementos } = this.state;
         if (error) {
@@ -148,7 +100,15 @@ class Blog extends React.Component {
                                     </ul>
                                 </Col>
                             </Row>
+                            <Row className="personal-profile convertidor">
+                            <h1>Convertidor</h1>
+                                <Col md="12" className="personal-profile__avatar">
+                                 <Calculadora></Calculadora>
+                                </Col>
+                            </Row>
+                            
                         </Container>
+                        
                     </Styles>
                 </PageLayout>
 

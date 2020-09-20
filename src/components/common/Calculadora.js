@@ -1,7 +1,7 @@
 import React from 'react';
-import './Calculadora.css';
-import AguaHirviendo from '../AguaHirviendo/AguaHirviendo';
-import CampoTemperatura from '../CampoTemperatura/CampoTemperatura';
+import AguaHirviendo from './AguaHirviendo';
+import CampoTemperatura from './CampoTemperatura';
+
 
 function aCelsius(fahrenheit) {
   return (fahrenheit - 32) * 5 / 9;
@@ -21,7 +21,7 @@ function convertirTemperatura(temperatura, conversion) {
   return redondeado.toString();
 }
 
-class Convertidor extends React.Component {
+class Calculadora extends React.Component {
     constructor(props) {
       super(props);
       this.ejecutarCambioCelsius = this.ejecutarCambioCelsius.bind(this);
@@ -45,20 +45,21 @@ class Convertidor extends React.Component {
     
         return (
           <div>
-            <CampoTemperatura
+
+             <CampoTemperatura
               escala="c"
               temperatura={celsius}
               ejecutarCambioTemperatura={this.ejecutarCambioCelsius} />
-            <CampoTemperatura
+            <CampoTemperatura 
               escala="f"
               temperatura={fahrenheit}
               ejecutarCambioTemperatura={this.ejecutarCambioFahrenheit} />
-            <AguaHirviendo
-              celsius={parseFloat(celsius)} />
+             <AguaHirviendo
+              celsius={parseFloat(celsius)} /> 
           </div>
         );
 
       }
   }
   
-export default Convertidor;
+export default Calculadora;
