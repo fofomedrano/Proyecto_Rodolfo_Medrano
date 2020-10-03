@@ -7,7 +7,7 @@ export default function Contact() {
     return (
         <PageLayout>
            <h1>
-              Contacto
+              Contactos
            </h1>
         </PageLayout>
     )
