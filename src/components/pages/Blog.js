@@ -77,7 +77,7 @@ class Blog extends React.Component {
                             <Container>
                                 <Row className="personal-profile">
                                     <Col md="4" className="personal-profile__avatar">
-                                        <h1>Blog</h1>
+                                        <h1>Blog con hooks</h1>
                                     </Col>
                                 </Row>
                             </Container>
