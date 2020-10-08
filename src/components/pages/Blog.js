@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { css } from "@emotion/core";
 import BounceLoader from "react-spinners/BounceLoader";
 import Calculadora from 'components/common/Calculadora';
+import { ComponenteHooks } from 'components/common/ComponenteHooks';
 
 
 const Styles = styled.div` 
@@ -101,7 +102,7 @@ class Blog extends React.Component {
                                  <Calculadora></Calculadora>
                                 </Col>
                             </Row>
-                            
+                            <ComponenteHooks/>
                         </Container>
                         
                     </Styles>

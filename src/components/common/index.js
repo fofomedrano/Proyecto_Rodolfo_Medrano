@@ -11,3 +11,4 @@ export * from './LoginForm';
 export * from './CampoTemperatura';
 export * from './Calculadora';
 export * from './AguaHirviendo';
+export * from './useHookHttp';
